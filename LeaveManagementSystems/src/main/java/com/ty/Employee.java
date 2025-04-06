@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
+
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +25,7 @@ public class Employee {
 	@OneToOne(mappedBy = "employee")
 	private Attendance attendance;
 	
-	@OneToOne(mappedBy = "employee",cascade = CascadeType.PERSIST)
+	@OneToOne(mappedBy = "employee",cascade = CascadeType.ALL)
 	private Login loginData;
 
 	public int getId() {

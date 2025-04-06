@@ -34,6 +34,7 @@ while(true)
 
 	                if (leaves.isEmpty()) {
 	                    System.out.println("There are no leave requests.");
+	                  
 	                } else {
 	                    for (LeaveReuest l : leaves) {
 	                        System.out.println("---------------------------------------------------");
@@ -86,6 +87,7 @@ while(true)
 	               Employee emp1 =entityManager.find(Employee.class, id);
 	               LeaveReuest leaveReuest=new LeaveReuest();
 	               leaveReuest.setAppOrRej(true);
+	
 	               leaveReuest.setLeaveEDate(edate);
 	               leaveReuest.setLeaveSDate(lsdate);
 	               leaveReuest.setReason(reason);
@@ -143,6 +145,7 @@ while(true)
 		                }
 		                break;
 	            case 4:System.exit(0);
+	            break;
 
 	            default:
 	                System.out.println("Invalid choice.");

@@ -16,6 +16,13 @@ public class Login {
 	 @Column(unique = true, nullable = false)
 	private String username;
 	private String password;
+	private String type;
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	@OneToOne
 	@JoinColumn
 	private Employee employee;
